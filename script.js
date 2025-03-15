@@ -172,79 +172,85 @@ window.onload = function() {
         faqItems[i].onclick = function() {
             var content = this.nextElementSibling;
             
-            if (content.style.maxHeight) {
-                content.style.maxHeight = null;
+            if (this.classList.contains('active')) {
                 this.classList.remove('active');
             } else {
-                content.style.maxHeight = content.scrollHeight + 'px';
                 this.classList.add('active');
             }
         };
     }
     
-    // ===== CONTACT FORM =====
-    // Handle contact form submission
+    // ===== CONTACT FORM WITH FORMSPREE =====
     var contactForm = document.getElementById('contactForm');
+    var formMessage = document.getElementById('formMessage');
     
     if (contactForm) {
-        contactForm.onsubmit = function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            var name = document.getElementById('name').value;
-            var email = document.getElementById('email').value;
-            var phone = document.getElementById('phone').value;
-            var subject = document.getElementById('subject').value;
-            var message = document.getElementById('message').value;
-            
-            // Validate form
-            if (!name || !email || !subject || !message) {
-                showFormMessage('error', 'Please fill in all required fields.');
-                return;
-            }
-            
+        contactForm.addEventListener('submit', function(e) {
             // Show loading state
             var submitButton = contactForm.querySelector('button[type="submit"]');
-            var originalButtonText = submitButton.innerHTML;
-            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            submitButton.classList.add('loading');
+            submitButton.querySelector('.btn-text').style.display = 'none';
+            submitButton.querySelector('.btn-loading').style.display = 'inline-block';
             submitButton.disabled = true;
             
-            // Simulate form submission (replace with actual form submission)
-            setTimeout(function() {
-                // Show success message
-                showFormMessage('success', 'Message sent successfully! We will get back to you soon.');
-                contactForm.reset();
-                
-                // Reset button state
-                submitButton.innerHTML = originalButtonText;
+            // Use fetch API to submit the form to Formspree
+            fetch(contactForm.action, {
+                method: 'POST',
+                body: new FormData(contactForm),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Reset loading state
+                submitButton.classList.remove('loading');
+                submitButton.querySelector('.btn-text').style.display = 'inline-block';
+                submitButton.querySelector('.btn-loading').style.display = 'none';
                 submitButton.disabled = false;
-            }, 2000);
-        };
+                
+                if (data.ok) {
+                    // Success
+                    showFormMessage('success', 'Message sent successfully! We will get back to you soon.');
+                    contactForm.reset();
+                } else {
+                    // Error
+                    showFormMessage('error', 'There was a problem sending your message. Please try again.');
+                }
+            })
+            .catch(error => {
+                // Reset loading state
+                submitButton.classList.remove('loading');
+                submitButton.querySelector('.btn-text').style.display = 'inline-block';
+                submitButton.querySelector('.btn-loading').style.display = 'none';
+                submitButton.disabled = false;
+                
+                // Show error message
+                showFormMessage('error', 'There was a problem sending your message. Please try again.');
+                console.error('Form submission error:', error);
+            });
+            
+            // Prevent the default form submission
+            e.preventDefault();
+        });
     }
     
     // Function to show form message
     function showFormMessage(type, text) {
-        // Remove any existing message
-        var existingMessage = document.querySelector('.form-message');
-        if (existingMessage) {
-            existingMessage.remove();
-        }
+        if (!formMessage) return;
         
-        // Create message element
-        var messageElement = document.createElement('div');
-        messageElement.className = 'form-message ' + type;
-        messageElement.textContent = text;
-        
-        // Add message to the form
-        contactForm.appendChild(messageElement);
+        // Set message content and class
+        formMessage.textContent = text;
+        formMessage.className = 'form-message ' + type;
         
         // Remove message after 5 seconds
         setTimeout(function() {
-            messageElement.style.opacity = '0';
-            messageElement.style.transition = 'opacity 0.5s ease';
+            formMessage.style.opacity = '0';
             
             setTimeout(function() {
-                messageElement.remove();
+                formMessage.textContent = '';
+                formMessage.className = 'form-message';
+                formMessage.style.opacity = '1';
             }, 500);
         }, 5000);
     }
@@ -260,10 +266,10 @@ window.onload = function() {
         canvas.height = canvas.offsetHeight;
         
         // Handle window resize
-        window.onresize = function() {
+        window.addEventListener('resize', function() {
             canvas.width = canvas.offsetWidth;
             canvas.height = canvas.offsetHeight;
-        };
+        });
         
         // Create particles
         var particles = [];
