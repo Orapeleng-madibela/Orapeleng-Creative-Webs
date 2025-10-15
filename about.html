@@ -3,188 +3,466 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Orapeleng Creative Webs - Our story, mission, and the team behind exceptional web development services.">
     <title>About Us - Orapeleng Creative Webs</title>
-    <meta name="description" content="Learn about Orapeleng Creative Webs, our story, values, and process for creating beautiful websites.">
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="styles.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome for icons -->
+    
+     Font Awesome Icons 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+     Google Fonts 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+     CSS 
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <a href="index.html" class="logo">
-                    Orapeleng <span>Creative Webs</span>
-                </a>
-                <nav class="main-nav">
-                    <ul class="nav-list">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html" class="active">About</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </nav>
-                <div class="nav-buttons">
-                    <a href="contact.html" class="btn btn-outline">
-                        Get Started <i class="fas fa-arrow-right"></i>
+     Navigation 
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-code"></i>
+                <span>Orapeleng Creative Webs</span>
+            </div>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
                     </a>
-                    <button class="mobile-menu-btn" id="mobileMenuBtn">
-                        <i class="fas fa-bars"></i>
-                    </button>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link active">
+                        <i class="fas fa-user"></i>
+                        <span>About</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="services.html" class="nav-link">
+                        <i class="fas fa-briefcase"></i>
+                        <span>Services</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact</span>
+                    </a>
+                </li>
+            </ul>
+            
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+     Page Header 
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content animate-fade-in-up">
+                <h1 class="page-title">About Us</h1>
+                <p class="page-subtitle">Crafting Digital Excellence Since 2019</p>
+                <nav class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <span>About</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+     About Content Section 
+    <section class="about-content-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image animate-on-scroll">
+                    <img src="/placeholder.svg?height=500&width=600&text=Our+Team" alt="Our Team">
+                    <div class="about-image-overlay">
+                        <div class="experience-badge">
+                            <div class="badge-number">5+</div>
+                            <div class="badge-text">Years of Experience</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-text animate-on-scroll">
+                    <span class="section-tag">Our Story</span>
+                    <h2 class="section-title">Building Digital Success Stories</h2>
+                    <p>
+                        Orapeleng Creative Webs was founded with a simple mission: to help businesses thrive in the digital world. We believe that every business deserves a website that not only looks beautiful but also drives real results.
+                    </p>
+                    <p>
+                        Over the years, we've grown from a solo freelancer to a dedicated team of web developers, designers, and digital strategists. Our passion for creating exceptional web experiences has helped dozens of businesses establish their online presence and achieve their goals.
+                    </p>
+                    <p>
+                        We stay up-to-date with the latest web technologies and design trends to ensure our clients always get cutting-edge solutions. Our commitment to quality, communication, and customer satisfaction has made us a trusted partner for businesses across South Africa.
+                    </p>
+
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Customer-Focused Approach</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Modern Technologies</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Responsive Design</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Ongoing Support</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </header>
+    </section>
 
-    <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu">
-        <ul class="mobile-nav-list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </div>
+     Mission Vision Section 
+    <section class="mission-vision-section">
+        <div class="container">
+            <div class="mission-vision-grid">
+                <div class="mission-card animate-on-scroll">
+                    <div class="card-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Our Mission</h3>
+                    <p>
+                        To empower businesses with innovative web solutions that drive growth, enhance user experience, and deliver measurable results. We are committed to turning digital visions into reality through creativity, technology, and dedication.
+                    </p>
+                </div>
 
-    <main>
-        <!-- Page Header -->
-        <section class="page-header">
-            <div class="container">
-                <h1>About Orapeleng Creative Webs</h1>
-                <p>We create beautiful, functional websites that help businesses grow</p>
+                <div class="vision-card animate-on-scroll">
+                    <div class="card-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Our Vision</h3>
+                    <p>
+                        To be South Africa's leading web development agency, recognized for exceptional quality, innovation, and customer satisfaction. We aim to set new standards in web design and development while helping businesses thrive online.
+                    </p>
+                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Our Story Section -->
-        <section class="story-section">
-            <div class="container">
-                <div class="story-content">
-                    <div class="story-image">
-                        <div class="gradient-box">
-                            <div class="gradient-overlay">Our Journey</div>
+     Values Section 
+    <section class="values-section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Our Core Values</span>
+                <h2 class="section-title">What Drives Us</h2>
+                <p class="section-description">
+                    The principles that guide everything we do
+                </p>
+            </div>
+
+            <div class="values-grid">
+                <div class="value-card animate-on-scroll" style="animation-delay: 0.1s;">
+                    <div class="value-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3>Quality First</h3>
+                    <p>We never compromise on quality. Every project we deliver meets the highest standards of excellence.</p>
+                </div>
+
+                <div class="value-card animate-on-scroll" style="animation-delay: 0.2s;">
+                    <div class="value-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Innovation</h3>
+                    <p>We embrace new technologies and creative solutions to stay ahead in the ever-evolving digital landscape.</p>
+                </div>
+
+                <div class="value-card animate-on-scroll" style="animation-delay: 0.3s;">
+                    <div class="value-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Integrity</h3>
+                    <p>Honesty and transparency in all our dealings build trust and long-lasting client relationships.</p>
+                </div>
+
+                <div class="value-card animate-on-scroll" style="animation-delay: 0.4s;">
+                    <div class="value-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Collaboration</h3>
+                    <p>We work closely with our clients, treating their success as our own and valuing their input.</p>
+                </div>
+
+                <div class="value-card animate-on-scroll" style="animation-delay: 0.5s;">
+                    <div class="value-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Results-Driven</h3>
+                    <p>We focus on delivering tangible results that help our clients achieve their business objectives.</p>
+                </div>
+
+                <div class="value-card animate-on-scroll" style="animation-delay: 0.6s;">
+                    <div class="value-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Passion</h3>
+                    <p>Our love for web development drives us to create exceptional digital experiences every single day.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     Skills Section 
+    <section class="skills-section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Our Expertise</span>
+                <h2 class="section-title">Technical Skills</h2>
+                <p class="section-description">
+                    Technologies and tools we master to deliver exceptional results
+                </p>
+            </div>
+
+            <div class="skills-content">
+                <div class="skills-text animate-on-scroll">
+                    <h3>We Build with Modern Technologies</h3>
+                    <p>
+                        Our team is proficient in a wide range of web technologies and frameworks. We carefully select the best tools for each project to ensure optimal performance, scalability, and maintainability.
+                    </p>
+                    <p>
+                        From front-end design to back-end development, we have the expertise to handle every aspect of your web project. We continuously update our skills to stay current with industry trends and best practices.
+                    </p>
+                </div>
+
+                <div class="skills-bars animate-on-scroll">
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">HTML & CSS</span>
+                            <span class="skill-percentage">95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%;"></div>
                         </div>
                     </div>
-                    <div class="story-text">
-                        <h2>Our Story</h2>
-                        <p>Orapeleng Creative Webs was founded with a simple mission: to provide affordable, high-quality website solutions to businesses of all sizes. We believe that every business deserves a professional online presence without breaking the bank.</p>
-                        <p>Our team combines technical expertise with creative design to deliver websites that not only look great but also perform exceptionally well. We take pride in our attention to detail and commitment to customer satisfaction.</p>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">JavaScript</span>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Responsive Design</span>
+                            <span class="skill-percentage">98%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 98%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">UI/UX Design</span>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">SEO Optimization</span>
+                            <span class="skill-percentage">88%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 88%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">E-commerce Development</span>
+                            <span class="skill-percentage">82%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 82%;"></div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Our Values Section -->
-        <section class="values-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Our Values</h2>
-                    <p>The principles that guide our work</p>
+     Why Choose Us Section 
+    <section class="why-choose-section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Why Choose Us</span>
+                <h2 class="section-title">What Makes Us Different</h2>
+                <p class="section-description">
+                    Here's why businesses trust us with their web presence
+                </p>
+            </div>
+
+            <div class="why-choose-grid">
+                <div class="why-card animate-on-scroll" style="animation-delay: 0.1s;">
+                    <div class="why-number">01</div>
+                    <h3>Tailored Solutions</h3>
+                    <p>We don't believe in one-size-fits-all. Every website we create is custom-designed to match your unique business needs and brand identity.</p>
                 </div>
-                <div class="values-grid">
-                    <div class="value-card">
-                        <h3>Quality</h3>
-                        <p>We never compromise on quality. Every website we create is built to the highest standards, ensuring it not only looks great but also performs exceptionally well.</p>
-                    </div>
-                    <div class="value-card">
-                        <h3>Affordability</h3>
-                        <p>We believe that professional web design should be accessible to businesses of all sizes. Our pricing is transparent and competitive, with no hidden costs.</p>
-                    </div>
-                    <div class="value-card">
-                        <h3>Customer Focus</h3>
-                        <p>Your satisfaction is our priority. We listen to your needs, provide regular updates, and ensure the final product exceeds your expectations.</p>
-                    </div>
-                    <div class="value-card">
-                        <h3>Innovation</h3>
-                        <p>We stay at the forefront of web design trends and technologies to provide cutting-edge solutions that help your business stand out.</p>
-                    </div>
-                    <div class="value-card">
-                        <h3>Integrity</h3>
-                        <p>We operate with honesty and transparency in all our dealings. What we promise is what we deliver, on time and within budget.</p>
-                    </div>
-                    <div class="value-card">
-                        <h3>Growth</h3>
-                        <p>We're committed to helping your business grow. Our websites are designed to attract visitors, convert leads, and boost your bottom line.</p>
-                    </div>
+
+                <div class="why-card animate-on-scroll" style="animation-delay: 0.2s;">
+                    <div class="why-number">02</div>
+                    <h3>Transparent Process</h3>
+                    <p>We keep you informed every step of the way. You'll always know what we're working on and when to expect deliverables.</p>
+                </div>
+
+                <div class="why-card animate-on-scroll" style="animation-delay: 0.3s;">
+                    <div class="why-number">03</div>
+                    <h3>Affordable Pricing</h3>
+                    <p>Quality web development doesn't have to break the bank. We offer competitive rates without compromising on excellence.</p>
+                </div>
+
+                <div class="why-card animate-on-scroll" style="animation-delay: 0.4s;">
+                    <div class="why-number">04</div>
+                    <h3>Fast Turnaround</h3>
+                    <p>We respect your time and deadlines. Our efficient workflow ensures your project is completed on schedule.</p>
+                </div>
+
+                <div class="why-card animate-on-scroll" style="animation-delay: 0.5s;">
+                    <div class="why-number">05</div>
+                    <h3>Ongoing Support</h3>
+                    <p>Our relationship doesn't end at launch. We provide continued support to ensure your website stays secure and up-to-date.</p>
+                </div>
+
+                <div class="why-card animate-on-scroll" style="animation-delay: 0.6s;">
+                    <div class="why-number">06</div>
+                    <h3>Mobile-First Approach</h3>
+                    <p>With most users browsing on mobile devices, we design with mobile in mind first, ensuring a seamless experience everywhere.</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Our Process Section -->
-        <section class="process-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Our Process</h2>
-                    <p>How we bring your website to life</p>
-                </div>
-                <div class="process-steps">
-                    <div class="process-step">
-                        <div class="step-number">1</div>
-                        <h3>Discovery</h3>
-                        <p>We start by understanding your business, goals, and target audience to create a website that meets your specific needs.</p>
-                    </div>
-                    <div class="process-step">
-                        <div class="step-number">2</div>
-                        <h3>Design</h3>
-                        <p>Our designers create a custom layout that reflects your brand identity and provides an excellent user experience.</p>
-                    </div>
-                    <div class="process-step">
-                        <div class="step-number">3</div>
-                        <h3>Development</h3>
-                        <p>Our developers bring the design to life, ensuring your website is responsive, fast, and functional across all devices.</p>
-                    </div>
-                    <div class="process-step">
-                        <div class="step-number">4</div>
-                        <h3>Delivery</h3>
-                        <p>After thorough testing, we launch your website and provide training on how to manage and update your content.</p>
-                    </div>
+     CTA Section 
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content animate-on-scroll">
+                <h2 class="cta-title">Let's Build Something Amazing Together</h2>
+                <p class="cta-description">
+                    Ready to take your online presence to the next level? Get in touch with us today
+                </p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary btn-lg">
+                        <span>Start Your Project</span>
+                        <i class="fas fa-rocket"></i>
+                    </a>
+                    <a href="services.html" class="btn btn-outline-light btn-lg">
+                        <span>View Services</span>
+                        <i class="fas fa-briefcase"></i>
+                    </a>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- CTA Section -->
-        <section class="cta-section">
-            <div class="container">
-                <div class="cta-content">
-                    <h2>Ready to Start Your Project?</h2>
-                    <p>Let's create a website that helps your business thrive</p>
-                    <div class="cta-buttons">
-                        <a href="contact.html" class="btn btn-secondary">
-                            Contact Us <i class="fas fa-arrow-right"></i>
-                        </a>
-                        <a href="services.html" class="btn btn-outline-light">
-                            View Our Services
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
+     Footer 
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-brand">
+                        <i class="fas fa-code"></i>
+                        <span>Orapeleng Creative Webs</span>
+                    </div>
+                    <p class="footer-description">
+                        Creating exceptional web experiences that drive business growth and engage audiences.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Web Development</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> UI/UX Design</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> E-commerce</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> SEO Services</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">Contact Info</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Business Street<br>Johannesburg, South Africa</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+27 123 456 789</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@orapelengcreative.co.za</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
                 <p>&copy; <span id="currentYear"></span> Orapeleng Creative Webs. All rights reserved.</p>
-                <div class="social-links">
-                    <a href="https://instagram.com/orapelengmadibela?utm_source=qr&igsh=MzNINGNkZWQ4Mg==" aria-label="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://www.facebook.com/orapeleng.madibela.98" aria-label="Facebook">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="https://wa.me/27662343315" aria-label="WhatsApp">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <span>|</span>
+                    <a href="#">Terms of Service</a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Scripts -->
-    <script src="script.js"></script>
+     Back to Top Button 
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+     JavaScript 
+    <script src="js/script.js"></script>
 </body>
 </html>
