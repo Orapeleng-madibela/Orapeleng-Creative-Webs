@@ -3,278 +3,622 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services - Orapeleng Creative Webs</title>
-    <meta name="description" content="Explore our affordable website packages and services tailored for small businesses, entrepreneurs, and individuals.">
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="styles.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome for icons -->
+    <meta name="description" content="Explore our comprehensive web development services - from custom websites to e-commerce solutions and SEO optimization.">
+    <title>Our Services - Orapeleng Creative Webs</title>
+    
+     Font Awesome Icons 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+     Google Fonts 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+     CSS 
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <a href="index.html" class="logo">
-                    Orapeleng <span>Creative Webs</span>
-                </a>
-                <nav class="main-nav">
-                    <ul class="nav-list">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="services.html" class="active">Services</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </nav>
-                <div class="nav-buttons">
-                    <a href="contact.html" class="btn btn-outline">
-                        Get Started <i class="fas fa-arrow-right"></i>
+     Navigation 
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-code"></i>
+                <span>Orapeleng Creative Webs</span>
+            </div>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
                     </a>
-                    <button class="mobile-menu-btn" id="mobileMenuBtn">
-                        <i class="fas fa-bars"></i>
-                    </button>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">
+                        <i class="fas fa-user"></i>
+                        <span>About</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="services.html" class="nav-link active">
+                        <i class="fas fa-briefcase"></i>
+                        <span>Services</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact</span>
+                    </a>
+                </li>
+            </ul>
+            
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+     Page Header 
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content animate-fade-in-up">
+                <h1 class="page-title">Our Services</h1>
+                <p class="page-subtitle">Comprehensive Web Solutions for Your Business</p>
+                <nav class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <span>Services</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+     Services Details Section 
+    <section class="services-details-section">
+        <div class="container">
+             Web Development Service 
+            <div class="service-detail animate-on-scroll">
+                <div class="service-detail-content">
+                    <div class="service-detail-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="service-detail-text">
+                        <h2>Web Development</h2>
+                        <p class="lead">
+                            Build a powerful online presence with our custom web development services. We create fast, secure, and scalable websites tailored to your business needs.
+                        </p>
+                        <div class="service-features">
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <div>
+                                    <h4>Responsive Design</h4>
+                                    <p>Websites that look perfect on all devices - desktop, tablet, and mobile</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <div>
+                                    <h4>Modern Technologies</h4>
+                                    <p>Built with HTML5, CSS3, JavaScript, and latest frameworks</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <div>
+                                    <h4>Fast Loading Speed</h4>
+                                    <p>Optimized code for lightning-fast page loads</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <div>
+                                    <h4>SEO Friendly</h4>
+                                    <p>Built with search engine optimization in mind</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pricing-info">
+                            <span class="price-label">Starting from</span>
+                            <span class="price">R 3,500</span>
+                        </div>
+                        <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+                    </div>
+                </div>
+                <div class="service-detail-image">
+                    <img src="/placeholder.svg?height=400&width=500&text=Web+Development" alt="Web Development">
+                </div>
+            </div>
+
+             UI/UX Design Service 
+            <div class="service-detail reverse animate-on-scroll">
+                <div class="service-detail-image">
+                    <img src="/placeholder.svg?height=400&width=500&text=UI+UX+Design" alt="UI/UX Design">
+                </div>
+                <div class="service-detail-content">
+                    <div class="service-detail-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <div class="service-detail-text">
+                        <h2>UI/UX Design</h2>
+                        <p class="lead">
+                            Create engaging user experiences with beautiful interfaces. Our design process focuses on usability, aesthetics, and conversion optimization.
+                        </p>
+                        <div class="service-features">
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <div>
+                                    <h4>User Research</h4>
+                                    <p>Understanding your audience to create designs that resonate</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <div>
+                                    <h4>Wireframing & Prototyping</h4>
+                                    <p>Interactive prototypes before development begins</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <div>
+                                    <h4>Brand Consistency</h4>
+                                    <p>Designs that align with your brand identity</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <div>
+                                    <h4>Modern Aesthetics</h4>
+                                    <p>Contemporary designs that stand out from the competition</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pricing-info">
+                            <span class="price-label">Starting from</span>
+                            <span class="price">R 2,500</span>
+                        </div>
+                        <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+                    </div>
+                </div>
+            </div>
+
+             E-commerce Service 
+            <div class="service-detail animate-on-scroll">
+                <div class="service-detail-content">
+                    <div class="service-detail-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="service-detail-text">
+                        <h2>E-commerce Solutions</h2>
+                        <p class="lead">
+                            Launch your online store and start selling today. We build robust e-commerce platforms with secure payment processing and inventory management.
+                        </p>
+                        <div class="service-features">
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <div>
+                                    <h4>Product Management</h4>
+                                    <p>Easy-to-use system for managing your products and inventory</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <div>
+                                    <h4>Secure Payments</h4>
+                                    <p>Integration with trusted payment gateways</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <div>
+                                    <h4>Shopping Cart</h4>
+                                    <p>Intuitive cart and checkout experience</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <div>
+                                    <h4>Order Management</h4>
+                                    <p>Track orders, manage shipping, and handle returns</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pricing-info">
+                            <span class="price-label">Starting from</span>
+                            <span class="price">R 8,000</span>
+                        </div>
+                        <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+                    </div>
+                </div>
+                <div class="service-detail-image">
+                    <img src="/placeholder.svg?height=400&width=500&text=E-commerce" alt="E-commerce Solutions">
+                </div>
+            </div>
+
+             Mobile Optimization Service 
+            <div class="service-detail reverse animate-on-scroll">
+                <div class="service-detail-image">
+                    <img src="/placeholder.svg?height=400&width=500&text=Mobile+Optimization" alt="Mobile Optimization">
+                </div>
+                <div class="service-detail-content">
+                    <div class="service-detail-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="service-detail-text">
+                        <h2>Mobile Optimization</h2>
+                        <p class="lead">
+                            Ensure your website works perfectly on all mobile devices. With most users browsing on smartphones, mobile optimization is essential.
+                        </p>
+                        <div class="service-features">
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <div>
+                                    <h4>Mobile-First Design</h4>
+                                    <p>Designed for mobile devices first, then scaled up</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <div>
+                                    <h4>Touch-Friendly Interface</h4>
+                                    <p>Optimized buttons and navigation for touch screens</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <div>
+                                    <h4>Fast Mobile Loading</h4>
+                                    <p>Optimized images and code for quick mobile access</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <div>
+                                    <h4>Cross-Device Testing</h4>
+                                    <p>Tested on various devices and screen sizes</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pricing-info">
+                            <span class="price-label">Starting from</span>
+                            <span class="price">R 2,000</span>
+                        </div>
+                        <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+                    </div>
+                </div>
+            </div>
+
+             Website Maintenance Service 
+            <div class="service-detail animate-on-scroll">
+                <div class="service-detail-content">
+                    <div class="service-detail-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="service-detail-text">
+                        <h2>Website Maintenance</h2>
+                        <p class="lead">
+                            Keep your website running smoothly with our maintenance services. We handle updates, backups, security, and technical support.
+                        </p>
+                        <div class="service-features">
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <div>
+                                    <h4>Regular Updates</h4>
+                                    <p>Keep your website secure with the latest updates</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <div>
+                                    <h4>Daily Backups</h4>
+                                    <p>Automatic backups to protect your data</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <div>
+                                    <h4>Security Monitoring</h4>
+                                    <p>24/7 security monitoring and malware scanning</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <div>
+                                    <h4>Technical Support</h4>
+                                    <p>Priority support when you need help</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pricing-info">
+                            <span class="price-label">Starting from</span>
+                            <span class="price">R 500/month</span>
+                        </div>
+                        <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+                    </div>
+                </div>
+                <div class="service-detail-image">
+                    <img src="/placeholder.svg?height=400&width=500&text=Website+Maintenance" alt="Website Maintenance">
+                </div>
+            </div>
+
+             SEO Optimization Service 
+            <div class="service-detail reverse animate-on-scroll">
+                <div class="service-detail-image">
+                    <img src="/placeholder.svg?height=400&width=500&text=SEO+Optimization" alt="SEO Optimization">
+                </div>
+                <div class="service-detail-content">
+                    <div class="service-detail-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="service-detail-text">
+                        <h2>SEO Optimization</h2>
+                        <p class="lead">
+                            Improve your website's visibility on search engines and attract more organic traffic. Our SEO services help you rank higher in search results.
+                        </p>
+                        <div class="service-features">
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <div>
+                                    <h4>Keyword Research</h4>
+                                    <p>Find the right keywords to target your audience</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <div>
+                                    <h4>On-Page SEO</h4>
+                                    <p>Optimize content, meta tags, and site structure</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <div>
+                                    <h4>Technical SEO</h4>
+                                    <p>Improve site speed, mobile-friendliness, and crawlability</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <div>
+                                    <h4>Monthly Reports</h4>
+                                    <p>Track your progress with detailed analytics</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pricing-info">
+                            <span class="price-label">Starting from</span>
+                            <span class="price">R 1,500/month</span>
+                        </div>
+                        <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </header>
+    </section>
 
-    <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu">
-        <ul class="mobile-nav-list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </div>
-
-    <main>
-        <!-- Page Header -->
-        <section class="page-header">
-            <div class="container">
-                <h1>Our Services & Packages</h1>
-                <p>Affordable website solutions tailored to your needs</p>
+     FAQ Section 
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">FAQ</span>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-description">
+                    Find answers to common questions about our services
+                </p>
             </div>
-        </section>
 
-        <!-- Packages Section -->
-        <section class="packages-section">
-            <div class="container">
-                <div class="tabs">
-                    <div class="tab-buttons">
-                        <button class="tab-btn active" data-tab="packages">Website Packages</button>
-                        <button class="tab-btn" data-tab="additional">Additional Services</button>
+            <div class="faq-container">
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question">
+                        <h3>How long does it take to build a website?</h3>
+                        <i class="fas fa-plus"></i>
                     </div>
-                    <div class="tab-content">
-                        <div class="tab-pane active" id="packages">
-                            <div class="service-cards">
-                                <!-- Basic Package -->
-                                <div class="service-card">
-                                    <div class="service-header">
-                                        <h3>Basic Package</h3>
-                                        <p>Perfect for individuals and small businesses</p>
-                                        <div class="price">R 3,500</div>
-                                    </div>
-                                    <div class="service-content">
-                                        <ul class="feature-list">
-                                            <li><i class="fas fa-check"></i> Custom 5-page website (Home, About, Services, Contact, Blog)</li>
-                                            <li><i class="fas fa-check"></i> Responsive design (mobile-friendly)</li>
-                                            <li><i class="fas fa-check"></i> Contact form integration</li>
-                                            <li><i class="fas fa-check"></i> 1-week delivery</li>
-                                        </ul>
-                                        <div class="examples">
-                                            <h4>Examples:</h4>
-                                            <ul>
-                                                <li>Personal portfolio website</li>
-                                                <li>Small business brochure website</li>
-                                                <li>Event website</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="service-footer">
-                                        <a href="contact.html" class="btn btn-primary btn-full">Get Started</a>
-                                    </div>
-                                </div>
+                    <div class="faq-answer">
+                        <p>
+                            The timeline depends on the complexity of your project. A basic website typically takes 2-3 weeks, while more complex sites with custom features can take 6-8 weeks. We'll provide a detailed timeline during our initial consultation.
+                        </p>
+                    </div>
+                </div>
 
-                                <!-- Standard Package -->
-                                <div class="service-card popular">
-                                    <div class="popular-tag">Popular</div>
-                                    <div class="service-header">
-                                        <h3>Standard Package</h3>
-                                        <p>Ideal for growing businesses</p>
-                                        <div class="price">R 6,500</div>
-                                    </div>
-                                    <div class="service-content">
-                                        <ul class="feature-list">
-                                            <li><i class="fas fa-check"></i> Custom 10-page website (includes Basic Package pages + 5 additional pages)</li>
-                                            <li><i class="fas fa-check"></i> Responsive design (mobile-friendly)</li>
-                                            <li><i class="fas fa-check"></i> Contact form integration</li>
-                                            <li><i class="fas fa-check"></i> Social media integration</li>
-                                            <li><i class="fas fa-check"></i> 2-week delivery</li>
-                                        </ul>
-                                        <div class="examples">
-                                            <h4>Examples:</h4>
-                                            <ul>
-                                                <li>E-commerce website for small business</li>
-                                                <li>Restaurant website with online menu</li>
-                                                <li>Non-profit organization website</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="service-footer">
-                                        <a href="contact.html" class="btn btn-primary btn-full">Get Started</a>
-                                    </div>
-                                </div>
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question">
+                        <h3>Do I need to provide content for my website?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            While we can help with content creation, having your own content ready speeds up the process. We recommend providing text, images, and any specific information you want on your site. If needed, we can also assist with professional copywriting services.
+                        </p>
+                    </div>
+                </div>
 
-                                <!-- Premium Package -->
-                                <div class="service-card">
-                                    <div class="service-header">
-                                        <h3>Premium Package</h3>
-                                        <p>For established businesses with complex needs</p>
-                                        <div class="price">R 12,000</div>
-                                    </div>
-                                    <div class="service-content">
-                                        <ul class="feature-list">
-                                            <li><i class="fas fa-check"></i> Custom 15-page website (includes Standard Package pages + 5 additional pages)</li>
-                                            <li><i class="fas fa-check"></i> Responsive design (mobile-friendly)</li>
-                                            <li><i class="fas fa-check"></i> Contact form integration</li>
-                                            <li><i class="fas fa-check"></i> Social media integration</li>
-                                            <li><i class="fas fa-check"></i> E-commerce integration (online store)</li>
-                                            <li><i class="fas fa-check"></i> Custom design elements (logos, icons, etc.)</li>
-                                            <li><i class="fas fa-check"></i> 3-week delivery</li>
-                                        </ul>
-                                        <div class="examples">
-                                            <h4>Examples:</h4>
-                                            <ul>
-                                                <li>Advanced e-commerce website with payment gateway</li>
-                                                <li>Custom website with database integration</li>
-                                                <li>Large business website with multiple departments</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="service-footer">
-                                        <a href="contact.html" class="btn btn-primary btn-full">Get Started</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane" id="additional">
-                            <div class="additional-services">
-                                <!-- Additional Services -->
-                                <div class="service-card">
-                                    <div class="service-header">
-                                        <h3>Website Maintenance</h3>
-                                        <div class="price">R 500/month</div>
-                                    </div>
-                                    <div class="service-content">
-                                        <p>Keep your website up-to-date with regular updates, security patches, and content changes.</p>
-                                    </div>
-                                    <div class="service-footer">
-                                        <a href="contact.html" class="btn btn-primary btn-full">Get Started</a>
-                                    </div>
-                                </div>
-                                <div class="service-card">
-                                    <div class="service-header">
-                                        <h3>Website Updates</h3>
-                                        <div class="price">R 1,000/update</div>
-                                    </div>
-                                    <div class="service-content">
-                                        <p>One-time updates to your existing website, including content changes, new pages, or feature additions.</p>
-                                    </div>
-                                    <div class="service-footer">
-                                        <a href="contact.html" class="btn btn-primary btn-full">Get Started</a>
-                                    </div>
-                                </div>
-                                <div class="service-card">
-                                    <div class="service-header">
-                                        <h3>Custom Design Elements</h3>
-                                        <div class="price">R 1,500/design element</div>
-                                    </div>
-                                    <div class="service-content">
-                                        <p>Custom logos, icons, banners, and other graphic elements to enhance your website's visual appeal.</p>
-                                    </div>
-                                    <div class="service-footer">
-                                        <a href="contact.html" class="btn btn-primary btn-full">Get Started</a>
-                                    </div>
-                                </div>
-                                <div class="service-card">
-                                    <div class="service-header">
-                                        <h3>E-commerce Integration</h3>
-                                        <div class="price">R 3,000</div>
-                                    </div>
-                                    <div class="service-content">
-                                        <p>Add online store functionality to your existing website, including product listings and payment processing.</p>
-                                    </div>
-                                    <div class="service-footer">
-                                        <a href="contact.html" class="btn btn-primary btn-full">Get Started</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question">
+                        <h3>Will my website be mobile-friendly?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            All our websites are built with a mobile-first approach, ensuring they look great and function perfectly on all devices - smartphones, tablets, and desktops. We test on multiple devices before launch.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question">
+                        <h3>Can I update my website myself?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Yes! We can build your website with an easy-to-use content management system that allows you to make updates without technical knowledge. We also provide training and documentation to help you manage your site confidently.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question">
+                        <h3>What if I need changes after my website is live?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            We offer ongoing maintenance and support services. Whether you need minor updates or major changes, we're here to help. You can choose from our maintenance packages or request changes on an as-needed basis.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question">
+                        <h3>Do you offer hosting services?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            While we don't provide hosting directly, we can recommend reliable hosting providers and help you set up your hosting account. We can also manage the hosting for you as part of our maintenance services.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question">
+                        <h3>What is your payment structure?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            We typically require a 50% deposit to start your project, with the remaining 50% due upon completion. For larger projects, we can arrange a payment plan. We accept bank transfers, EFT, and other payment methods.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question">
+                        <h3>Will my website be optimized for search engines?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Yes! We implement basic SEO best practices in all our websites, including proper meta tags, heading structure, and fast loading speeds. For more advanced SEO strategies, we offer dedicated SEO optimization services.
+                        </p>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Payment Terms Section -->
-        <section class="payment-terms-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Payment Terms</h2>
-                    <p>Transparent and flexible payment options</p>
-                </div>
-                <div class="payment-terms">
-                    <div class="card">
-                        <h3>Initial Deposit</h3>
-                        <p>We require a 50% deposit of the total project cost before work begins. This allows us to allocate resources and start working on your project immediately.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Final Payment</h3>
-                        <p>The remaining 50% balance is due upon completion of the project, before the website goes live. We'll provide a preview of the completed website for your approval before requesting the final payment.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA Section -->
-        <section class="cta-section">
-            <div class="container">
-                <div class="cta-content">
-                    <h2>Ready to Get Started?</h2>
-                    <p>Contact us today to discuss your project and get a free consultation</p>
-                    <div class="cta-buttons">
-                        <a href="contact.html" class="btn btn-secondary">
-                            Contact Us <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
+     CTA Section 
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content animate-on-scroll">
+                <h2 class="cta-title">Ready to Get Started?</h2>
+                <p class="cta-description">
+                    Let's discuss your project and create a custom solution for your business
+                </p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary btn-lg">
+                        <span>Request a Quote</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </a>
+                    <a href="index.html#portfolio" class="btn btn-outline-light btn-lg">
+                        <span>View Portfolio</span>
+                        <i class="fas fa-folder-open"></i>
+                    </a>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <!-- Footer -->
+     Footer 
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-brand">
+                        <i class="fas fa-code"></i>
+                        <span>Orapeleng Creative Webs</span>
+                    </div>
+                    <p class="footer-description">
+                        Creating exceptional web experiences that drive business growth and engage audiences.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Web Development</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> UI/UX Design</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> E-commerce</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> SEO Services</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">Contact Info</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Business Street<br>Johannesburg, South Africa</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+27 123 456 789</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@orapelengcreative.co.za</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
                 <p>&copy; <span id="currentYear"></span> Orapeleng Creative Webs. All rights reserved.</p>
-                <div class="social-links">
-                    <a href="https://instagram.com/orapelengmadibela?utm_source=qr&igsh=MzNINGNkZWQ4Mg==" aria-label="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://www.facebook.com/orapeleng.madibela.98" aria-label="Facebook">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="https://wa.me/27662343315" aria-label="WhatsApp">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <span>|</span>
+                    <a href="#">Terms of Service</a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Scripts -->
-    <script src="script.js"></script>
+     Back to Top Button 
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+     JavaScript 
+    <script src="js/script.js"></script>
 </body>
 </html>
