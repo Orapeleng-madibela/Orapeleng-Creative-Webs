@@ -3,162 +3,371 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get in touch with Orapeleng Creative Webs for your web development needs. Request a quote or schedule a consultation.">
     <title>Contact Us - Orapeleng Creative Webs</title>
-    <meta name="description" content="Get in touch with Orapeleng Creative Webs for affordable website solutions.">
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="styles.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome for icons -->
+    
+     Font Awesome Icons 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+     Google Fonts 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+     CSS 
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <a href="index.html" class="logo">
-                    Orapeleng <span>Creative Webs</span>
-                </a>
-                <nav class="main-nav">
-                    <ul class="nav-list">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="contact.html" class="active">Contact</a></li>
-                    </ul>
-                </nav>
-                <div class="nav-buttons">
-                    <a href="contact.html" class="btn btn-outline">
-                        Get Started <i class="fas fa-arrow-right"></i>
+     Navigation 
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-code"></i>
+                <span>Orapeleng Creative Webs</span>
+            </div>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
                     </a>
-                    <button class="mobile-menu-btn" id="mobileMenuBtn">
-                        <i class="fas fa-bars"></i>
-                    </button>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">
+                        <i class="fas fa-user"></i>
+                        <span>About</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="services.html" class="nav-link">
+                        <i class="fas fa-briefcase"></i>
+                        <span>Services</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link active">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact</span>
+                    </a>
+                </li>
+            </ul>
+            
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+     Page Header 
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content animate-fade-in-up">
+                <h1 class="page-title">Contact Us</h1>
+                <p class="page-subtitle">Let's Start Building Your Online Presence</p>
+                <nav class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <span>Contact</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+     Contact Section 
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                 Contact Information 
+                <div class="contact-info animate-on-scroll">
+                    <h2>Get In Touch</h2>
+                    <p>
+                        Have a project in mind? We'd love to hear from you. Fill out the form or reach out using the contact information below.
+                    </p>
+
+                    <div class="contact-cards">
+                        <div class="contact-card">
+                            <div class="contact-card-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <h3>Visit Us</h3>
+                            <p>123 Business Street<br>Johannesburg, South Africa<br>2000</p>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-card-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <h3>Call Us</h3>
+                            <p>
+                                <a href="tel:+27123456789">+27 123 456 789</a><br>
+                                Mon-Fri: 9:00 AM - 5:00 PM
+                            </p>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-card-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h3>Email Us</h3>
+                            <p>
+                                <a href="mailto:info@orapelengcreative.co.za">info@orapelengcreative.co.za</a><br>
+                                We'll respond within 24 hours
+                            </p>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-card-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <h3>Working Hours</h3>
+                            <p>
+                                Monday - Friday: 9:00 AM - 5:00 PM<br>
+                                Saturday: 10:00 AM - 2:00 PM<br>
+                                Sunday: Closed
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="social-connect">
+                        <h3>Connect With Us</h3>
+                        <div class="social-links-large">
+                            <a href="#" class="social-link-large" aria-label="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-link-large" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-link-large" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-link-large" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                 Contact Form 
+                <div class="contact-form-wrapper animate-on-scroll">
+                    <div class="contact-form-card">
+                        <h2>Send Us a Message</h2>
+                        <p>Fill out the form below and we'll get back to you as soon as possible.</p>
+
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">
+                                        <i class="fas fa-user"></i>
+                                        Full Name *
+                                    </label>
+                                    <input 
+                                        type="text" 
+                                        id="name" 
+                                        name="name" 
+                                        required
+                                        placeholder="John Doe"
+                                    >
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email">
+                                        <i class="fas fa-envelope"></i>
+                                        Email Address *
+                                    </label>
+                                    <input 
+                                        type="email" 
+                                        id="email" 
+                                        name="email" 
+                                        required
+                                        placeholder="john@example.com"
+                                    >
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="phone">
+                                        <i class="fas fa-phone"></i>
+                                        Phone Number
+                                    </label>
+                                    <input 
+                                        type="tel" 
+                                        id="phone" 
+                                        name="phone"
+                                        placeholder="+27 123 456 789"
+                                    >
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="subject">
+                                        <i class="fas fa-tag"></i>
+                                        Subject *
+                                    </label>
+                                    <select id="subject" name="subject" required>
+                                        <option value="">Select a subject</option>
+                                        <option value="general">General Inquiry</option>
+                                        <option value="quote">Request a Quote</option>
+                                        <option value="web-dev">Web Development</option>
+                                        <option value="design">UI/UX Design</option>
+                                        <option value="ecommerce">E-commerce</option>
+                                        <option value="maintenance">Website Maintenance</option>
+                                        <option value="seo">SEO Services</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="budget">
+                                    <i class="fas fa-dollar-sign"></i>
+                                    Budget Range
+                                </label>
+                                <select id="budget" name="budget">
+                                    <option value="">Select your budget</option>
+                                    <option value="3000-5000">R 3,000 - R 5,000</option>
+                                    <option value="5000-10000">R 5,000 - R 10,000</option>
+                                    <option value="10000-15000">R 10,000 - R 15,000</option>
+                                    <option value="15000+">R 15,000+</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">
+                                    <i class="fas fa-comment"></i>
+                                    Your Message *
+                                </label>
+                                <textarea 
+                                    id="message" 
+                                    name="message" 
+                                    rows="5" 
+                                    required
+                                    placeholder="Tell us about your project..."
+                                ></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="newsletter" name="newsletter">
+                                    <span>Subscribe to our newsletter for updates and tips</span>
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-lg btn-block">
+                                <span>Send Message</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </header>
+    </section>
 
-    <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu">
-        <ul class="mobile-nav-list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="contact.html" class="active">Contact</a></li>
-        </ul>
-    </div>
+     Map Section 
+    <section class="map-section">
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3583.3897285842!2d28.047304315024935!3d-26.107437083473374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950c68f0406a51%3A0x238ac9d9b1d34041!2sJohannesburg%2C%20South%20Africa!5e0!3m2!1sen!2s!4v1634567890123!5m2!1sen!2s" 
+                width="100%" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy"
+                title="Our Location"
+            ></iframe>
+        </div>
+    </section>
 
-    <main>
-        <!-- Contact Hero Section -->
-        <section class="page-header">
-            <div class="container">
-                <h1>Contact Us</h1>
-                <p>Get in touch with us for your website needs</p>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section class="contact-section">
-            <div class="container">
-                <div class="contact-content">
-                    <div class="contact-info">
-                        <div class="info-card">
-                            <i class="fas fa-envelope"></i>
-                            <h3>Email</h3>
-                            <p><a href="mailto:orapelengcreativeweb@petalmail.com">orapelengcreativeweb@petalmail.com</a></p>
-                        </div>
-                        <div class="info-card">
-                            <i class="fas fa-phone"></i>
-                            <h3>Phone</h3>
-                            <p><a href="tel:+27766069486">+27 76 606 9486</a></p>
-                        </div>
-                        <div class="info-card">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <h3>Location</h3>
-                            <p>Kraalhoek, South Africa</p>
-                        </div>
-                        
-                        <div class="social-links-large">
-                            <h3>Connect With Us</h3>
-                            <div class="social-icons">
-                                <a href="https://instagram.com/orapelengmadibela?utm_source=qr&igsh=MzNINGNkZWQ4Mg==" aria-label="Instagram">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                                <a href="https://www.facebook.com/orapeleng.madibela.98" aria-label="Facebook">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                                <a href="https://wa.me/27662343315" aria-label="WhatsApp">
-                                    <i class="fab fa-whatsapp"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-form-container">
-                        <h2>Send Us a Message</h2>
-                        <form id="contactForm" action="https://formspree.io/f/xrbpgver" method="POST">
-                            <div class="form-group">
-                                <label for="name">Name <span class="required">*</span></label>
-                                <input type="text" id="name" name="name" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="email">Email <span class="required">*</span></label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="phone">Phone</label>
-                                <input type="tel" id="phone" name="phone">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="subject">Subject <span class="required">*</span></label>
-                                <input type="text" id="subject" name="subject" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="message">Message <span class="required">*</span></label>
-                                <textarea id="message" name="message" rows="5" required></textarea>
-                            </div>
-                            
-                            <button type="submit" class="btn btn-primary btn-full">
-                                <span class="btn-text">Send Message</span>
-                                <span class="btn-loading"><i class="fas fa-spinner fa-spin"></i> Sending...</span>
-                            </button>
-                        </form>
-                        <div id="formMessage" class="form-message"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
+     Footer 
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-brand">
+                        <i class="fas fa-code"></i>
+                        <span>Orapeleng Creative Webs</span>
+                    </div>
+                    <p class="footer-description">
+                        Creating exceptional web experiences that drive business growth and engage audiences.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Web Development</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> UI/UX Design</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> E-commerce</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> SEO Services</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">Contact Info</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Business Street<br>Johannesburg, South Africa</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+27 123 456 789</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@orapelengcreative.co.za</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
                 <p>&copy; <span id="currentYear"></span> Orapeleng Creative Webs. All rights reserved.</p>
-                <div class="social-links">
-                    <a href="https://instagram.com/orapelengmadibela?utm_source=qr&igsh=MzNINGNkZWQ4Mg==" aria-label="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://www.facebook.com/orapeleng.madibela.98" aria-label="Facebook">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="https://wa.me/27662343315" aria-label="WhatsApp">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <span>|</span>
+                    <a href="#">Terms of Service</a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Back to top button will be added by JavaScript -->
+     Back to Top Button 
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
-    <!-- Scripts -->
-    <script src="script.js"></script>
+     JavaScript 
+    <script src="js/script.js"></script>
 </body>
 </html>
