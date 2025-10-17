@@ -341,7 +341,6 @@ document.addEventListener("DOMContentLoaded", () => {
       id: 1,
       title: "Business Consulting Website",
       description: "Modern website for a professional consulting firm",
-      image: "/placeholder.svg?height=300&width=400&text=Business+Website",
       category: "business",
       tags: ["HTML", "CSS", "JavaScript"],
     },
@@ -349,7 +348,6 @@ document.addEventListener("DOMContentLoaded", () => {
       id: 2,
       title: "E-commerce Fashion Store",
       description: "Online store for fashion boutique",
-      image: "/placeholder.svg?height=300&width=400&text=E-commerce+Store",
       category: "ecommerce",
       tags: ["E-commerce", "Shopping Cart", "Payment Gateway"],
     },
@@ -357,7 +355,6 @@ document.addEventListener("DOMContentLoaded", () => {
       id: 3,
       title: "Personal Portfolio",
       description: "Creative portfolio for a designer",
-      image: "/placeholder.svg?height=300&width=400&text=Portfolio+Website",
       category: "portfolio",
       tags: ["Portfolio", "Responsive", "Modern"],
     },
@@ -365,7 +362,6 @@ document.addEventListener("DOMContentLoaded", () => {
       id: 4,
       title: "Restaurant Website",
       description: "Website with online menu and reservations",
-      image: "/placeholder.svg?height=300&width=400&text=Restaurant+Website",
       category: "business",
       tags: ["Restaurant", "Menu", "Reservations"],
     },
@@ -373,7 +369,6 @@ document.addEventListener("DOMContentLoaded", () => {
       id: 5,
       title: "Madibela's Family",
       description: "Family website with photo gallery and history",
-      image: "/placeholder.svg?height=300&width=400&text=Family+Website",
       category: "portfolio",
       tags: ["Family", "Gallery", "Custom Design"],
       link: "https://madibelasfamily.netlify.app/",
@@ -382,7 +377,6 @@ document.addEventListener("DOMContentLoaded", () => {
       id: 6,
       title: "Tech Startup Landing Page",
       description: "Modern landing page for tech startup",
-      image: "/placeholder.svg?height=300&width=400&text=Startup+Landing",
       category: "business",
       tags: ["Landing Page", "Modern", "Startup"],
     },
@@ -400,7 +394,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       portfolioItem.innerHTML = `
                 <div class="portfolio-image">
-                    <img src="${project.image}" alt="${project.title}">
+                    ${project.title}
                     <div class="portfolio-overlay">
                         <div class="portfolio-info">
                             <span class="portfolio-category">${project.category}</span>
@@ -434,19 +428,16 @@ document.addEventListener("DOMContentLoaded", () => {
       name: "Sarah Johnson",
       company: "Bloom Boutique",
       text: "Orapeleng Creative Webs transformed our online presence. Our new website is beautiful, user-friendly, and has significantly increased our online sales. The team was professional and responsive throughout the entire process.",
-      image: "/placeholder.svg?height=60&width=60&text=SJ",
     },
     {
       name: "Michael Thompson",
       company: "Thompson Consulting",
       text: "I needed a professional website for my consulting business, and Orapeleng delivered beyond my expectations. The design is modern, the site loads quickly, and it's easy to navigate. I've received numerous compliments from clients.",
-      image: "/placeholder.svg?height=60&width=60&text=MT",
     },
     {
       name: "Lerato Molefe",
       company: "Molefe Bakery",
       text: "As a small business owner, I was looking for an affordable website solution that didn't compromise on quality. Orapeleng Creative Webs provided exactly that. My website looks premium but was within my budget.",
-      image: "/placeholder.svg?height=60&width=60&text=LM",
     },
   ]
 
@@ -551,199 +542,7 @@ document.addEventListener("DOMContentLoaded", () => {
     testimonialsContainer.addEventListener("mouseleave", startAutoplay)
   }
 
-  // ===== FAQ ACCORDION =====
-  const faqItems = document.querySelectorAll(".faq-item")
-
-  faqItems.forEach((item) => {
-    const question = item.querySelector(".faq-question")
-    const answer = item.querySelector(".faq-answer")
-
-    if (question && answer) {
-      question.addEventListener("click", () => {
-        // Close other items
-        faqItems.forEach((otherItem) => {
-          if (otherItem !== item && otherItem.classList.contains("active")) {
-            otherItem.classList.remove("active")
-            const otherAnswer = otherItem.querySelector(".faq-answer")
-            if (otherAnswer) {
-              otherAnswer.style.maxHeight = null
-            }
-          }
-        })
-
-        // Toggle current item
-        item.classList.toggle("active")
-
-        if (item.classList.contains("active")) {
-          answer.style.maxHeight = answer.scrollHeight + "px"
-        } else {
-          answer.style.maxHeight = null
-        }
-      })
-    }
-  })
-
-  // ===== CONTACT FORM =====
-  const contactForm = document.getElementById("contactForm")
-
-  if (contactForm) {
-    contactForm.addEventListener("submit", (e) => {
-      e.preventDefault()
-
-      // Get form data
-      const formData = {
-        name: document.getElementById("name").value,
-        email: document.getElementById("email").value,
-        phone: document.getElementById("phone") ? document.getElementById("phone").value : "",
-        subject: document.getElementById("subject").value,
-        message: document.getElementById("message").value,
-      }
-
-      // Validate form
-      if (!formData.name || !formData.email || !formData.subject || !formData.message) {
-        showFormMessage("error", "Please fill in all required fields.")
-        return
-      }
-
-      // Email validation
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-      if (!emailRegex.test(formData.email)) {
-        showFormMessage("error", "Please enter a valid email address.")
-        return
-      }
-
-      // Show loading state
-      const submitButton = contactForm.querySelector('button[type="submit"]')
-      const originalButtonText = submitButton.innerHTML
-      submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...'
-      submitButton.disabled = true
-
-      // Simulate form submission (replace with actual form submission)
-      // You can use Formspree, EmailJS, or your own backend here
-      setTimeout(() => {
-        // Show success message
-        showFormMessage("success", "Message sent successfully! We will get back to you soon.")
-        contactForm.reset()
-
-        // Reset button state
-        submitButton.innerHTML = originalButtonText
-        submitButton.disabled = false
-
-        // For production, replace the setTimeout above with actual fetch to Formspree:
-        /*
-                fetch('https://formspree.io/f/your-form-id', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(formData)
-                })
-                .then(response => {
-                    if (response.ok) {
-                        showFormMessage('success', 'Message sent successfully! We will get back to you soon.');
-                        contactForm.reset();
-                    } else {
-                        throw new Error('Form submission failed');
-                    }
-                })
-                .catch(error => {
-                    showFormMessage('error', 'There was a problem sending your message. Please try again.');
-                })
-                .finally(() => {
-                    submitButton.innerHTML = originalButtonText;
-                    submitButton.disabled = false;
-                });
-                */
-      }, 2000)
-    })
-  }
-
-  function showFormMessage(type, text) {
-    // Remove existing message
-    const existingMessage = contactForm.querySelector(".form-message")
-    if (existingMessage) {
-      existingMessage.remove()
-    }
-
-    // Create new message
-    const message = document.createElement("div")
-    message.className = `form-message ${type}`
-    message.textContent = text
-
-    // Insert at the beginning of the form
-    contactForm.insertBefore(message, contactForm.firstChild)
-
-    // Remove message after 5 seconds
-    setTimeout(() => {
-      message.style.opacity = "0"
-      setTimeout(() => {
-        message.remove()
-      }, 300)
-    }, 5000)
-  }
-
-  // ===== LAZY LOADING IMAGES =====
-  if ("IntersectionObserver" in window) {
-    const imageObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const img = entry.target
-          img.src = img.dataset.src
-          img.classList.add("loaded")
-          imageObserver.unobserve(img)
-        }
-      })
-    })
-
-    const lazyImages = document.querySelectorAll("img[data-src]")
-    lazyImages.forEach((img) => imageObserver.observe(img))
-  }
-
-  // ===== PRELOADER (Optional) =====
-  window.addEventListener("load", () => {
-    const preloader = document.getElementById("preloader")
-    if (preloader) {
-      preloader.style.opacity = "0"
-      setTimeout(() => {
-        preloader.style.display = "none"
-      }, 300)
-    }
-  })
-
-  // ===== HANDLE EXTERNAL LINKS =====
-  const externalLinks = document.querySelectorAll('a[href^="http"]')
-
-  externalLinks.forEach((link) => {
-    if (link.hostname !== window.location.hostname) {
-      link.setAttribute("target", "_blank")
-      link.setAttribute("rel", "noopener noreferrer")
-    }
-  })
-
-  // ===== PERFORMANCE: Debounce scroll events =====
-  function debounce(func, wait) {
-    let timeout
-    return function executedFunction(...args) {
-      const later = () => {
-        clearTimeout(timeout)
-        func(...args)
-      }
-      clearTimeout(timeout)
-      timeout = setTimeout(later, wait)
-    }
-  }
-
-  // Apply debounce to resize events
-  let resizeTimer
-  window.addEventListener("resize", () => {
-    clearTimeout(resizeTimer)
-    resizeTimer = setTimeout(() => {
-      // Handle responsive adjustments here if needed
-    }, 250)
-  })
-
   // ===== CONSOLE MESSAGE =====
   console.log("%c👋 Welcome to Orapeleng Creative Webs!", "font-size: 20px; color: #4361ee; font-weight: bold;")
   console.log("%cInterested in our code? Contact us for web development services!", "font-size: 14px; color: #6c757d;")
-  console.log("%c🌐 Visit: https://orapelengcreativewebs.com", "font-size: 12px; color: #4cc9f0;")
 })
